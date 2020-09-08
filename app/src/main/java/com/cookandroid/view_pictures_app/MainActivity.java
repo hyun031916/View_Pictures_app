@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     TextView text1, text2;
@@ -51,6 +52,24 @@ public class MainActivity extends AppCompatActivity {
                     rGroup1.setVisibility(View.INVISIBLE);
                     btnOk.setVisibility(View.INVISIBLE);
                     imgPet.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+        btnOk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switch(rGroup1.getCheckedRadioButtonId()){
+                    case R.id.RdoDog:
+                        imgPet.setImageResource(R.drawable.dog);
+                        break;
+                    case R.id.RdoCat:
+                        imgPet.setImageResource(R.drawable.cat);
+                        break;
+                    case R.id.RdoRabbit:
+                        imgPet.setImageResource(R.drawable.rabbit);
+                        break;
+                    default:
+                        Toast.makeText(getApplicationContext(), "동물 먼저 선택하세요", Toast.LENGTH_SHORT).show();
                 }
             }
         });
