@@ -3,8 +3,10 @@ package com.cookandroid.view_pictures_app;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -35,5 +37,22 @@ public class MainActivity extends AppCompatActivity {
 
         btnOk = (Button) findViewById(R.id.BtnOk);
         imgPet = (ImageView) findViewById(R.id.ImgPet);
+
+        chkAgree.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(chkAgree.isChecked()==true){
+                    text2.setVisibility(View.VISIBLE);
+                    rGroup1.setVisibility(View.VISIBLE);
+                    btnOk.setVisibility(View.VISIBLE);
+                    imgPet.setVisibility(View.VISIBLE);
+                }else{
+                    text2.setVisibility(View.INVISIBLE);
+                    rGroup1.setVisibility(View.INVISIBLE);
+                    btnOk.setVisibility(View.INVISIBLE);
+                    imgPet.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
     }
 }
