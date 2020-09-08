@@ -21,6 +21,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:visibility="invisible"
+        android:text="좋아하는 애완동물은?"
+        android:id="@+id/Text2"
         />
         <RadioGroup
             android:layout_width="wrap_content"

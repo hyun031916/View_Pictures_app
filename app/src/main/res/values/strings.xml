@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">View_Pictures_app</string>
+    <string name="Text1"></string>
+    <string name="ChkAgree"></string>
+    <string name="Text2"></string>
+    <string name="Rgroup1"></string>
+    <string name="RdoDog"></string>
+    <string name="RdoCat"></string>
+    <string name="RdoRabbit"></string>
+    <string name="BtnOk"></string>
+    <string name="ImgPet"></string>
 </resources>
