@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     RadioButton rdoDog, rdoCat, rdoRabbit;
     Button btnOk;
     ImageView imgPet;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,5 +29,11 @@ public class MainActivity extends AppCompatActivity {
         chkAgree = (CheckBox)findViewById(R.id.ChkAgree);
 
         text2 = (TextView)findViewById(R.id.Text2);
+        rGroup1 = (RadioGroup) findViewById(R.id.Rgroup1);
+        rdoDog = (RadioButton) findViewById(R.id.RdoDog);
+        rdoCat = (RadioButton) findViewById(R.id.RdoRabbit);
+
+        btnOk = (Button) findViewById(R.id.BtnOk);
+        imgPet = (ImageView) findViewById(R.id.ImgPet);
     }
 }
